@@ -1,0 +1,13 @@
+{
+  "name": "type",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node tuple.ts"
+  },
+  "keywords": [],
+  "author": "이창섭",
+  "license": "ISC",
+  "description": "타입 연습"
+}

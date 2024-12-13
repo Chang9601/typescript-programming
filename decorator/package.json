@@ -4,11 +4,11 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "start": "ts-node class.ts"
+    "start": "ts-node method.ts"
   },
-  "author": "",
+  "author": "이창섭",
   "license": "ISC",
-  "description": "",
+  "description": "데코레이터 연습",
   "devDependencies": {
     "@types/node": "^22.10.1",
     "@types/typescript": "^2.0.0",
