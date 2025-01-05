@@ -5,7 +5,8 @@ import { UserCredentialsDataAccess } from '../src/user-credentials-data-access';
 const insert = jest.fn();
 const findBy = jest.fn();
 
-jest.mock('../src/database', () => {
+/* 생성자를 호출하기 때문에 팩토리를 사용하지 않는다. */
+jest.mock('../src/database/database', () => {
   return {
     Database: jest.fn().mockImplementation(() => {
       return {

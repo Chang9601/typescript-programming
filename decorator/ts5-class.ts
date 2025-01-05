@@ -20,7 +20,7 @@ function addGraduationDate<T extends { new (...args: any[]): {} }>(
     graduationDate = new Date().toISOString();
     constructor(...args: any[]) {
       super(...args);
-      console.log(`${coreClass}에 졸업날 추가`);
+      console.log(`${coreClass.name}에 졸업날 추가`);
     }
   };
 }

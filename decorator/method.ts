@@ -64,7 +64,7 @@ function addBudget(budget: number) {
         originalMethod.apply(this, args);
       } else {
         console.error(
-          `${propertyKey}을 위한 예산이 부족하다. 필요 예산은 ${budget}인데 가능한 예산은 ${instance.budget}.`
+          `${propertyKey} 예산 부족: 필요한 예산 ${budget} > 현재 예산 ${instance.budget}.`
         );
       }
     };
