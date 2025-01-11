@@ -7,8 +7,8 @@ let data = getDemographicData('ko');
 /*
  * 반환형을 모르는 경우 any보다 unknown을 사용한다.
  * unknown은 타입 축소를 강제한다.
+ * data.populations any의 경우 사용할 수 있지만 unknown에서는 사용할 수 없다.
  */
-// data.populations any의 경우 사용할 수 있지만 unknown에서는 사용할 수 없다.
 
 if (typeof data === 'number') {
   data++;
