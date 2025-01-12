@@ -1,7 +1,8 @@
-import { Account } from '../model/authentication.model';
+import { Account, SessionToken } from '../model/authentication.model';
+import { Database } from './database';
 
 export class SessionTokenDataAccess {
-  private sessionTokensDataBase = new DataBase<SessionToken>();
+  private sessionTokensDataBase = new Database<SessionToken>();
 
   public async generateToken(user: Account) {
     const tokenId = await this.sessionTokensDataBase.insert({
@@ -20,7 +21,7 @@ export class SessionTokenDataAccess {
 
   public async isValidToken(tokenId: string) {
     console.log(`Quering for ${tokenId} into the database`);
-    const sessionToken = await this.sessionTokensDataBase.getBy('id', tokenId);
+    const sessionToken = await this.sessionTokensDataBase.findBy('id', tokenId);
     if (sessionToken) {
       return sessionToken.valid;
     }
